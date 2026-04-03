@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn About Islam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Banner Header -->
+  <header>
+    <div class="banner-container">
+      <img src="images/mosque.jpg" alt="Beautiful mosque" class="banner">
+      <h1 class="site-title">Learn About Islam</h1>
+    </div>
+    <nav class="main-nav">
+    <a href="testhome.html">Introduction</a>
+    <a href="quran.html">God and His Scriptures</a>
+    <a href="resourses.html">All About Prayer</a>
+    <a href="PracticingFaith.html">Charity and Fasting</a>
+    <a href="Questions.html">Questions?</a>
+  </nav>
+  </header>
+
+<style>
+    /* =============================
+       Layout: FAQ + Contact
+       ============================= */
+    .faq-contact-container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .faq {
+      flex: 2;
+      background-color: ;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+   
+/* Contact section */
+.contact-section {
+  flex: 1;
+  background-color: hsla(161, 39%, 60%, 0.4);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* Match contact form to card style */
+.contact-section form {
+  border: 1px solid #ccc;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+/* Inputs */
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+.contact-section button {
+  background-color: #1e6f5c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background-color: #14533e;
+}
+
+
+    /* =============================
+       FAQ Styling
+       ============================= */
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background-color: hsla(161, 39%, 60%, 0.4);
+      color: black;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+
+    .faq-answer {
+      display: none; /* hidden by default */
+      padding: 10px;
+      background-color: white;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .faq-answer.active {
+      display: block; /* show when active */
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .faq-contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- FAQ + Contact Container -->
+  <div class="faq-contact-container">
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <h2>Common Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">What does Islam mean?</button>
+        <div class="faq-answer">
+          <p>Islam means submission to the will of God.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Who is Muhammad (PBUH)?</button>
+        <div class="faq-answer">
+          <p>He is the final prophet in Islam who delivered God's message.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What is the Qur'an?</button>
+        <div class="faq-answer">
+          <p>The Qur'an is the holy book of Islam, believed to be the word of God.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What is Ramadan?</button>
+        <div class="faq-answer">
+          <p>The Holy month of fasting.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How does Islam compare to Abrahamic Faiths?</button>
+        <div class="faq-answer">
+          <p>The commandments, prophets, and core beliefs are generally more similar than different. Like Christians, Muslims also believe Jesus will return, but not as God.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Why Islam?</button>
+        <div class="faq-answer">
+          <p>Islam is clear, concise, and preserved. The Qur'an remains in its original language and is memorized by millions.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+
+      <form action="https://formspree.io/f/mykbnkwl" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- =============================
+       FAQ JS
+       ============================= -->
+  <script>
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

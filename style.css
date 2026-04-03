@@ -1,0 +1,279 @@
+/* General */
+body {
+  background-color: #f0f8ff;
+  font-family: OpenSans;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+h1 {
+  color: #f0f8ff; /* fixed missing digit */
+}
+
+a {
+  color: #f0f8ff;
+}
+
+a:hover {
+  color: #14533e;
+}
+
+/* Navigation */
+nav a {
+  margin: 12px;
+  color: blue;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #1e6f5c;
+}
+
+.banner-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.site-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Navigation bar */
+.main-nav {
+  background-color: #1e6f5c;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.main-nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Content section (cards + image) */
+.content-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.text-column {
+  flex: 1;
+}
+
+.image-column {
+  flex: 1;
+}
+
+.image-column img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Cards */
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #1e6f5c;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+/* FAQ + Contact layout */
+.faq-contact-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.faq {
+  flex: 2;
+}
+
+.contact-section {
+  flex: 1;
+}
+
+/* Match contact form to card style */
+.contact-section form {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* Inputs */
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+.contact-section button {
+  background-color: #1e6f5c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background-color: #14533e;
+}
+/* FAQ + Contact layout */
+.faq-contact-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* FAQ section */
+.faq {
+  flex: 2;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Contact section */
+.contact-section {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Match contact form to card style */
+.contact-section form {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* Inputs */
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+.contact-section button {
+  background-color: #1e6f5c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background-color: #14533e;
+}
+
+/* FAQ question styling */
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background-color: #1e6f5c;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* FAQ answer styling */
+.faq-answer {
+  display: none;            /* hidden by default */
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Show FAQ answer when active */
+.faq-answer.active {
+  display: block;           /* show when .active is added */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .faq-contact-container {
+    flex-direction: column;
+  }
+
+  .image-column img {
+    width: 100%;
+  }
+}
+a {
+  color: #2e6f5c;      /* teal text by default */
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #14533e;      /* darker teal on hover */
+}
+ul.custom-bullets li::marker {
+  color: #2e6f5c;
+  font-size: 1.2em;           /* make bullets slightly bigger */
+}
+
+.image-card {
+  background-color: hsla(161, 39%, 60%, 0.4); /* pick any color */
+}
